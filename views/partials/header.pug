@@ -1,0 +1,26 @@
+extends ./head
+block content
+	.all-wrapper
+		.header
+			a.header-logo(href='/')
+				label.uaa-logo UAA
+				label.ctf-logo CTF
+			.header-menu
+				a.each-menu-item(href='/about_us') About Us
+				a.each-menu-item(href='/leaderboard') Leaderboard
+				a.each-menu-item(href='/rules') Rules
+				if user 
+					a.each-menu-item(href='challenges') Challenges
+			.header-auth
+				if user 
+					div#logout-button
+						i.fas.fa-sign-out-alt
+						a.each-auth-item#logout-button Logout
+				else
+					a.each-auth-item(href='/auth/login')
+						i.fas.fa-sign-in-alt
+						.each-auth-text Login
+					a.each-auth-item(href='/auth/register')
+						i.fas.fa-user
+						.each-auth-text Register
+		block main

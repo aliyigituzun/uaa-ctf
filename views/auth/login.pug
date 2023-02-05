@@ -1,0 +1,13 @@
+extends ../partials/header
+block main
+	.all-content-wrapper
+		.title-wrapper
+		.each-content-wrapper.small-content-wrapper
+			label.input-label Login
+			input.text-input(placeholder='Email' name='email', type='email' required autocomplete='off')#email-input
+			input.text-input(placeholder='Password' name='password' type='password' required autocomplete='off')#password-input
+			label#error
+			button.submit-button#login-button Submit
+	.background-wrapper
+		.background-line-1
+		.background-line-2

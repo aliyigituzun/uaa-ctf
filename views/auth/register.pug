@@ -1,0 +1,10 @@
+extends ../partials/header
+block main
+	.all-content-wrapper
+		.title-wrapper
+		.each-content-wrapper.small-content-wrapper
+			label.input-label Register
+			input.text-input(placeholder='Email' name='email', type='email' required autocomplete='off')#email-input
+			input.text-input(placeholder='Password' name='password' type='password' required autocomplete='off')#password-input
+			label#error
+			button.submit-button#register-button Submit
